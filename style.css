@@ -1,0 +1,113 @@
+span {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    font-size: 1.5em;
+    line-height: 3em;
+    text-align: center;
+    width: 3em;
+    display: block;
+ }
+ 
+ .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 10px;
+    grid-template-areas: 
+    "item1 item1 item2 item2"
+    "item3 item4 item2 item2"
+    "item3 item5 item6 item7"
+    "item3 item8 item8 item7"
+    "item9 item9 item9 item9";
+ }
+
+ .el1{
+    display: flex;
+    grid-area: item1;
+    justify-content: center;
+    align-items: center;
+    background-color:  black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+ } 
+ .el2{
+    display: flex;
+    grid-area: item2;
+    justify-content: center;
+    align-items: center;
+    background-color: #098774;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start:1 ;
+    grid-row-end: 3;
+ }
+ .el3 {
+    display: flex;
+    grid-area: item3;
+    justify-content: center;
+    align-items: center;
+    background-color: #C8E6C9;
+    grid-row-start: 2;
+    grid-row-end: 5;
+ }
+ .el4 {
+    display: flex;
+    grid-area: item4;
+    justify-content: center;
+    align-items: center;
+    background-color:  #0A89A6;
+ }
+
+ .el5{
+    display: flex;
+    grid-area: item5;
+    justify-content: center;
+    align-items: center;
+    background-color:  #93A603;
+ }
+
+ .el6{
+    display: flex;
+    grid-area: item6;
+    justify-content: center;
+    align-items: center;
+    background-color:  black;
+
+ }
+
+ .el7{
+    display: flex;
+    grid-area: item7;
+    justify-content: center;
+    align-items: center;
+    background-color: #098774;
+    grid-row:  3 / 5;
+    grid-column: 4 / 4 ;
+    /* grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 4; */
+ }
+
+ .el8{
+    display: flex;
+    grid-area: item8;
+    justify-content: center;
+    align-items: center;
+    background-color: #C8E6C9;
+    grid-column: 2 / 4;
+    /* grid-column-start: 2;
+    grid-column-end: 4; */
+
+ }
+ .el9{
+    display: flex;
+    grid-area: item9;
+    justify-content: center;
+    align-items: center;
+    background-color:  #0A89A6;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-column-end: span 4;
+ }
